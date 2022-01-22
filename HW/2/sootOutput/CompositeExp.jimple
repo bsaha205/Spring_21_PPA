@@ -1,0 +1,29 @@
+abstract class CompositeExp extends BooleanExp
+{
+    BooleanExp left;
+    BooleanExp right;
+
+    void init(BooleanExp, BooleanExp)
+    {
+        CompositeExp this;
+        BooleanExp left, right;
+
+        this := @this: CompositeExp;
+        left := @parameter0: BooleanExp;
+        right := @parameter1: BooleanExp;
+        this.<CompositeExp: BooleanExp left> = left;
+        this.<CompositeExp: BooleanExp right> = right;
+        return;
+    }
+
+    abstract boolean evaluate();
+
+    void <init>()
+    {
+        CompositeExp this;
+
+        this := @this: CompositeExp;
+        specialinvoke this.<BooleanExp: void <init>()>();
+        return;
+    }
+}

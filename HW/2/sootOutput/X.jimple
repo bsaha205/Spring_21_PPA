@@ -1,0 +1,21 @@
+class X extends java.lang.Object
+{
+
+    X m()
+    {
+        X this, temp$0;
+
+        this := @this: X;
+        temp$0 = null;
+        return temp$0;
+    }
+
+    void <init>()
+    {
+        X this;
+
+        this := @this: X;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

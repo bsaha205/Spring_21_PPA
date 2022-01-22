@@ -1,0 +1,34 @@
+class Context extends java.lang.Object
+{
+
+    void assign(java.lang.Boolean, boolean)
+    {
+        Context this;
+        java.lang.Boolean varExp;
+        boolean b;
+
+        this := @this: Context;
+        varExp := @parameter0: java.lang.Boolean;
+        b := @parameter1: boolean;
+        return;
+    }
+
+    static boolean lookup(java.lang.String)
+    {
+        java.lang.String var;
+        boolean temp$0;
+
+        var := @parameter0: java.lang.String;
+        temp$0 = 1;
+        return temp$0;
+    }
+
+    void <init>()
+    {
+        Context this;
+
+        this := @this: Context;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

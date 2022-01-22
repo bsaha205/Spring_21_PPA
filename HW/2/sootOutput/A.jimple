@@ -1,0 +1,51 @@
+public class A extends java.lang.Object
+{
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        Context theContext, temp$0;
+        BooleanExp x, y, c, z;
+        VarExp temp$1, temp$2;
+        ConstExp temp$3;
+        CompositeExp o, exp;
+        OrExp temp$4;
+        AndExp temp$5;
+        boolean b, temp$6;
+
+        args := @parameter0: java.lang.String[];
+        temp$0 = new Context;
+        specialinvoke temp$0.<Context: void <init>()>();
+        theContext = temp$0;
+        temp$1 = new VarExp;
+        specialinvoke temp$1.<VarExp: void <init>(java.lang.String)>("X");
+        x = temp$1;
+        temp$2 = new VarExp;
+        specialinvoke temp$2.<VarExp: void <init>(java.lang.String)>("Y");
+        y = temp$2;
+        temp$3 = new ConstExp;
+        specialinvoke temp$3.<ConstExp: void <init>(boolean)>(1);
+        c = temp$3;
+        temp$4 = new OrExp;
+        specialinvoke temp$4.<OrExp: void <init>()>();
+        o = temp$4;
+        virtualinvoke o.<CompositeExp: void init(BooleanExp,BooleanExp)>(x, y);
+        temp$5 = new AndExp;
+        specialinvoke temp$5.<AndExp: void <init>()>();
+        exp = temp$5;
+        virtualinvoke exp.<CompositeExp: void init(BooleanExp,BooleanExp)>(c, o);
+        z = exp.<CompositeExp: BooleanExp left>;
+        temp$6 = virtualinvoke exp.<CompositeExp: boolean evaluate()>();
+        b = temp$6;
+        return;
+    }
+
+    public void <init>()
+    {
+        A this;
+
+        this := @this: A;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

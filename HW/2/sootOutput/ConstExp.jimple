@@ -1,0 +1,26 @@
+class ConstExp extends BooleanExp
+{
+    boolean value;
+
+    void <init>(boolean)
+    {
+        ConstExp this;
+        boolean value;
+
+        this := @this: ConstExp;
+        value := @parameter0: boolean;
+        specialinvoke this.<BooleanExp: void <init>()>();
+        this.<ConstExp: boolean value> = value;
+        return;
+    }
+
+    boolean evaluate()
+    {
+        ConstExp this;
+        boolean temp$0;
+
+        this := @this: ConstExp;
+        temp$0 = this.<ConstExp: boolean value>;
+        return temp$0;
+    }
+}

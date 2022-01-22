@@ -1,0 +1,61 @@
+class AndExp extends CompositeExp
+{
+
+    void init(BooleanExp, BooleanExp)
+    {
+        AndExp this;
+        BooleanExp left, right;
+
+        this := @this: AndExp;
+        left := @parameter0: BooleanExp;
+        right := @parameter1: BooleanExp;
+        specialinvoke this.<CompositeExp: void init(BooleanExp,BooleanExp)>(left, right);
+        return;
+    }
+
+    boolean evaluate()
+    {
+        AndExp this;
+        BooleanExp l, r;
+        boolean temp$0, temp$1, temp$2;
+
+        this := @this: AndExp;
+        l = this.<AndExp: BooleanExp left>;
+        r = this.<AndExp: BooleanExp right>;
+        temp$0 = virtualinvoke l.<BooleanExp: boolean evaluate()>();
+        if temp$0 == 0 goto label1;
+
+        goto label0;
+
+     label0:
+        nop;
+        temp$1 = virtualinvoke r.<BooleanExp: boolean evaluate()>();
+        if temp$1 == 0 goto label1;
+
+        goto label2;
+
+        goto label2;
+
+     label1:
+        nop;
+        temp$2 = 0;
+        goto label3;
+
+     label2:
+        nop;
+        temp$2 = 1;
+
+     label3:
+        nop;
+        return temp$2;
+    }
+
+    void <init>()
+    {
+        AndExp this;
+
+        this := @this: AndExp;
+        specialinvoke this.<CompositeExp: void <init>()>();
+        return;
+    }
+}

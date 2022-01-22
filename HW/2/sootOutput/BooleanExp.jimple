@@ -1,0 +1,14 @@
+abstract class BooleanExp extends java.lang.Object
+{
+
+    abstract boolean evaluate();
+
+    void <init>()
+    {
+        BooleanExp this;
+
+        this := @this: BooleanExp;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

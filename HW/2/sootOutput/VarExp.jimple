@@ -1,0 +1,28 @@
+class VarExp extends BooleanExp
+{
+    java.lang.String name;
+
+    void <init>(java.lang.String)
+    {
+        VarExp this;
+        java.lang.String name;
+
+        this := @this: VarExp;
+        name := @parameter0: java.lang.String;
+        specialinvoke this.<BooleanExp: void <init>()>();
+        this.<VarExp: java.lang.String name> = name;
+        return;
+    }
+
+    boolean evaluate()
+    {
+        VarExp this;
+        java.lang.String temp$0;
+        boolean temp$1;
+
+        this := @this: VarExp;
+        temp$0 = this.<VarExp: java.lang.String name>;
+        temp$1 = staticinvoke <Context: boolean lookup(java.lang.String)>(temp$0);
+        return temp$1;
+    }
+}

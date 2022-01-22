@@ -1,0 +1,28 @@
+class Constant extends BoolExp
+{
+    private boolean constant;
+
+    public void <init>(boolean)
+    {
+        Constant this;
+        boolean value;
+
+        this := @this: Constant;
+        value := @parameter0: boolean;
+        specialinvoke this.<BoolExp: void <init>()>();
+        this.<Constant: boolean constant> = value;
+        return;
+    }
+
+    public boolean evaluate(Context)
+    {
+        Constant this;
+        Context c;
+        boolean temp$0;
+
+        this := @this: Constant;
+        c := @parameter0: Context;
+        temp$0 = this.<Constant: boolean constant>;
+        return temp$0;
+    }
+}

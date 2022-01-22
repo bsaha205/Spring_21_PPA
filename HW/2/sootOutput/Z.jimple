@@ -1,0 +1,12 @@
+class Z extends Y
+{
+
+    void <init>()
+    {
+        Z this;
+
+        this := @this: Z;
+        specialinvoke this.<Y: void <init>()>();
+        return;
+    }
+}

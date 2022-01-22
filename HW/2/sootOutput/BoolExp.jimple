@@ -1,0 +1,14 @@
+abstract class BoolExp extends java.lang.Object
+{
+
+    public abstract boolean evaluate(Context);
+
+    void <init>()
+    {
+        BoolExp this;
+
+        this := @this: BoolExp;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}
